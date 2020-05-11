@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/bottom_navigation">
+    <fragment
+        android:id="@+id/wishlist_page"
+        android:name="com.example.headronvault.wishlist_page"
+        android:label="wishlist_page"
+        tools:layout="@layout/page_wishlist_main">
+        <action
+            android:id="@+id/action_wishlist_page_to_wishlist_detail_page"
+            app:destination="@id/wishlist_detail_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/wishlist_detail_page"
+        android:name="com.example.headronvault.wishlist_detail_page"
+        android:label="wishlist_detail_page"
+        tools:layout="@layout/page_wishlist_card_detail" />
+    <fragment
+        android:id="@+id/database_page"
+        android:name="com.example.headronvault.database_page"
+        android:label="database_page"
+        tools:layout="@layout/page_database_main">
+        <action
+            android:id="@+id/action_database_page_to_database_detail_page"
+            app:destination="@id/database_detail_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/database_detail_page"
+        android:name="com.example.headronvault.database_detail_page"
+        android:label="database_detail_page"
+        tools:layout="@layout/page_database_card_detail" />
+
+    <fragment
+        android:id="@+id/account_page"
+        android:name="com.example.headronvault.account_page"
+        android:label="Account_page"
+        tools:layout="@layout/page_account"/>
+    <fragment
+        android:id="@+id/bottom_navigation"
+        android:name="com.example.headronvault.Pages.bottom_navigation"
+        android:label="bottom_navigation"
+        tools:layout="@layout/page_bottom_navigation"/>
+</navigation>

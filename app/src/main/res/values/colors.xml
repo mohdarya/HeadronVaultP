@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Common">#1A1718</color>
+    <color name="Uncommon">#707883</color>
+    <color name="Rare">#A58E4A</color>
+    <color name="MythicRare">#BF4427</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="red">#d3202a</color>
+    <color name="black">#150b00</color>
+    <color name="blue">#0e67ab</color>
+    <color name="white">#F8E7B9</color>
+    <color name="green">#00733d</color>
+</resources>

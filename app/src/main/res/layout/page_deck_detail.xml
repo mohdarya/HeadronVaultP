@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deck_detail_page_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/deck_page_deck_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/deck_box_black" />
+
+    <TextView
+        android:id="@+id/deck_page_deck_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="100dp"
+        android:text="stompy green"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="@+id/deck_page_deck_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deck_page_deck_box"
+        app:layout_constraintTop_toTopOf="@+id/deck_page_deck_box"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/deck_page_green_color"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/deck_page_red_color"
+        app:layout_constraintStart_toStartOf="@+id/deck_page_deck_name"
+        app:layout_constraintTop_toBottomOf="@+id/deck_page_deck_name"
+        app:srcCompat="@color/green" />
+
+    <ImageView
+        android:id="@+id/deck_page_red_color"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/deck_page_blue_color"
+        app:layout_constraintStart_toEndOf="@+id/deck_page_green_color"
+        app:layout_constraintTop_toBottomOf="@+id/deck_page_deck_name"
+        app:srcCompat="@color/red"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/deck_page_blue_color"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/deck_page_black_color"
+        app:layout_constraintStart_toEndOf="@+id/deck_page_red_color"
+        app:layout_constraintTop_toBottomOf="@+id/deck_page_deck_name"
+        app:srcCompat="@color/blue"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/deck_page_black_color"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/deck_page_white_color"
+        app:layout_constraintStart_toEndOf="@+id/deck_page_blue_color"
+        app:layout_constraintTop_toBottomOf="@+id/deck_page_deck_name"
+        app:srcCompat="@color/black" />
+
+    <ImageView
+        android:id="@+id/deck_page_white_color"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/deck_page_deck_name"
+        app:layout_constraintStart_toEndOf="@+id/deck_page_black_color"
+        app:layout_constraintTop_toBottomOf="@+id/deck_page_deck_name"
+        app:srcCompat="@color/white"
+        android:visibility="invisible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/deck_page_detail_recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deck_page_deck_box"
+        tools:listitem="@layout/page_items_deck_details" />
+</androidx.constraintlayout.widget.ConstraintLayout>

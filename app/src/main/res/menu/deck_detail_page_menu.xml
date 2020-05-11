@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/deck_detail_menu_edit_cards"
+        android:title="Edit Cards" />
+    <item
+        android:id="@+id/deck_detail_menu_edit_art"
+        android:title="Edit Deck Art" />
+    <item
+        android:id="@+id/deck_detail_menu_edit_name"
+        android:title="Edit Deck Name" />
+    <item
+        android:id="@+id/deck_detail_menu_delete"
+        android:title="Delete Deck" />
+</menu>

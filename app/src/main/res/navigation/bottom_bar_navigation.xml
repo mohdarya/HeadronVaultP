@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_bar_navigation"
+    app:startDestination="@id/collection_page">
+    <fragment
+        android:id="@+id/collection_page"
+        android:name="com.example.headronvault.Pages.collection_page"
+        android:label="Collection "
+        tools:layout="@layout/page_collection_main">
+        <action
+            android:id="@+id/collectionPage_to_cardDetailPage"
+            app:destination="@id/card_detail_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/deck_page"
+        android:name="com.example.headronvault.Pages.deck_page"
+        android:label="Decks"
+        tools:layout="@layout/page_deck_main">
+        <action
+            android:id="@+id/deckPage_to_deckDetailPage"
+            app:destination="@id/deck_detail_page" />
+        <action
+            android:id="@+id/deck_page_to_make_a_deck"
+            app:destination="@id/make_deck" />
+    </fragment>
+    <fragment
+        android:id="@+id/deck_detail_page"
+        android:name="com.example.headronvault.Pages.deck_detail_page"
+        android:label="Deck Detail"
+        tools:layout="@layout/page_deck_detail">
+        <action
+            android:id="@+id/action_deck_detail_page_to_card_detail_page"
+            app:destination="@id/card_detail_page" />
+        <argument
+            android:name="deckData"
+            app:argType="com.example.headronvault.deck_page_data_parce" />
+        <action
+            android:id="@+id/pop_to_deck_page2"
+            app:popUpTo="@id/deck_page" />
+        <action
+            android:id="@+id/deck_detail_to_edit_deck"
+            app:destination="@id/edit_card_in_deck" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/card_detail_page"
+        android:name="com.example.headronvault.Pages.card_detail_page"
+        android:label="Card Detail"
+        tools:layout="@layout/page_card_detail">
+        <action
+            android:id="@+id/action_card_detail_page_to_deck_detail_page"
+            app:destination="@id/deck_detail_page" />
+        <argument
+            android:name="cardDetails"
+            app:argType="com.example.headronvault.collection_card_parce" />
+        <argument
+            android:name="cardName"
+            app:argType="com.example.headronvault.collection_page_data_parce" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/camera_page"
+        android:name="com.example.headronvault.Pages.camera_page"
+        android:label="Camera"
+        tools:layout="@layout/page_camera" >
+        <action
+            android:id="@+id/camera_pop_to_collection"
+            app:popUpTo="@id/collection_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/make_deck"
+        android:name="com.example.headronvault.Pages.make_deck"
+        android:label="Select Cards"
+        tools:layout="@layout/page_make_deck">
+        <action
+            android:id="@+id/action_make_deck_to_select_deck_art"
+            app:destination="@id/select_deck_art" />
+    </fragment>
+    <fragment
+        android:id="@+id/name_deck"
+        android:name="com.example.headronvault.Pages.name_deck"
+        android:label="Name Deck"
+        tools:layout="@layout/page_make_deck_naming">
+        <argument
+            android:name="selected_cards"
+            app:argType="com.example.headronvault.collection_page_data_parce[]" />
+        <argument
+            android:name="deck_art"
+            app:argType="string" />
+        <action
+            android:id="@+id/pop_to_deck_page"
+            app:popUpTo="@id/deck_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/select_deck_art"
+        android:name="com.example.headronvault.Pages.select_deck_art"
+        android:label="Select Deck Cover"
+        tools:layout="@layout/page_items_make_deck_art">
+        <action
+            android:id="@+id/action_select_deck_art_to_name_deck"
+            app:destination="@id/name_deck" />
+        <argument
+            android:name="selected_cards"
+            app:argType="com.example.headronvault.collection_page_data_parce[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_card_in_deck"
+        android:name="com.example.headronvault.Pages.edit_card_in_deck"
+        android:label="Edit Cards"
+        tools:layout="@layout/page_edit_cards_in_deck">
+        <action
+            android:id="@+id/edit_deck_pop_to_deck_detail"
+            app:popUpTo="@id/deck_detail_page" />
+        <argument
+            android:name="cards"
+            app:argType="com.example.headronvault.edit_cards_in_deck_data[]" />
+        <argument
+            android:name="deck_id"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

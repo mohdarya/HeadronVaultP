@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/page_items_deck_details_card_image"
+        android:layout_width="111dp"
+        android:layout_height="108dp"
+        tools:src="@drawable/small" />
+    <TextView
+        android:id="@+id/page_items_deck_details_card_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        tools:text="Blood Divination" />
+</LinearLayout>

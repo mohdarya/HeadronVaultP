@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deck_naming_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/deck_naming_submit_button"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:background="@drawable/form_button_shape"
+        android:text="@string/done"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <TextView
+        android:id="@+id/deck_naming_deck_art_name"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/form_textfield"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/deck_naming_submit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deck_naming_deck_art"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <EditText
+        android:labelFor="@+id/deck_naming_deck_name"
+        android:id="@+id/deck_naming_deck_name"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:autofillHints="Deck Name"
+        android:background="@drawable/form_textfield"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/deck_naming_submit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24000001" />
+
+    <TextView
+        android:id="@+id/deck_naming_deck_art"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:onClick="TextFieldClick"
+        android:text="@string/deck_art"
+        android:textColor="#c72c41"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/deck_naming_deck_art_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/deck_naming_deck_art_name"
+        app:layout_constraintTop_toBottomOf="@+id/deck_naming_deck_name" />
+
+    <TextView
+        android:id="@+id/deck_naming_deck_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="TextFieldClick"
+        android:text="@string/name"
+        android:textColor="#c72c41"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/deck_naming_deck_name"
+        app:layout_constraintEnd_toEndOf="@+id/deck_naming_deck_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/deck_naming_deck_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
